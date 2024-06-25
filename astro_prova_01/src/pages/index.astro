@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import Llibre from "../components/Llibre.astro";
+
+const llibres = [
+	{
+		titol: "ZOZÓ DORMILÓN",
+		autor: "BRUNO DOUIN",
+		imatge: "zozo_dormilon.jpg"
+	},
+	{
+		titol: "JA NO M'AGRADEN ELS LLIBRES!",
+		autor: "DAISY HIRST",
+		imatge: "ja_no_magraden_els_llibres.jpg"
+	},	{
+		titol: "¡YA NO ME GUSTAN LOS LIBROS!",
+		autor: "DAISY HIRST",
+		imatge: "ya_no_me_gustan_los_libros.jpg"
+	},	{
+		titol: "PUEDES HACERLO SOLO, SAM",
+		autor: "AMY HEST - ANITA JERAM",
+		imatge: "puedes_hacerlo_solo_sam.jpg"
+	},
+];
+---
+
+<Base>
+	<section>
+	  <h2>RECENTS</h2>
+	  <div class="llibres">
+		{llibres.map(llibre => (
+		  <Llibre titol={llibre.titol} autor={llibre.autor} imatge={llibre.imatge} />
+		))}
+	  </div>
+	</section>
+  </Base>

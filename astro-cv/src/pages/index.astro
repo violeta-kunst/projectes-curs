@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import cv from '../data/data.json';
+
+---
+
+<Layout title="Home">
+
+
+	<h1>PORTFOLIO</h1>
+
+	<h2>{cv.personal.nom}</h2>
+	<p>{cv.personal.contingut}</p>
+
+</Layout>

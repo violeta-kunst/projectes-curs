@@ -1,0 +1,68 @@
+{
+    "personal": {
+      "nom": "Violeta Kunst",
+      "contingut":"GRAPHIC DESIGN, WEB DESIGN, ILLUSTRATION, PHOTOGRAPHY AND VIDEO EDITING, CONTENT, WRITING AND NARRATIVE",
+      "telefon": "+34 634 860 630",
+      "data_naixement": "12/02/1997",
+      "adreça": "Av. Dels Països Catalans, 84 3B",
+      "població": "Vic"
+    },
+    "education": [
+      {
+        "nom": "Fine Arts Degree",
+        "data": "September 2015 - July 2020",
+        "lloc": "Universitat de Barcelona",
+        "slug": "grau-en-belles-arts-ub"
+      },
+      {
+        "nom": "Postgraduate degree in Graphic Design",
+        "data": "October 2020 - October 2021",
+        "lloc": "Esneca Business School ",
+        "slug": "postgrau-en-disseny-grafic-ebs"
+      },
+      {
+        "nom": "Web development full stack bootcamp",
+        "data": "Currently studying",
+        "lloc": "Fundació Esplai & MigraCode",
+        "slug": "curs-desenvolupament-web-full-stack"
+      }
+    ],
+    "laboral": [
+      {
+        "posicio": "Graphic Designer and Content Creator on Social Media",
+        "empresa": "Inout - Jowy",
+        "data": "nov.2023 - mar.2024",
+        "descripcio": "Creation and management of social media content for Instagram (jowy_originals) and TikTok (jowyoriginals). Responsibilities included setting up the recording set, photography, videography, and editing. Designed and laid out materials for social media, newsletters, and website banners. Developed branding elements, including a brand book and icons.",
+        "slug": "desenvolupador-de-programari-tech-solutions"
+      },
+      {
+        "posicio": "Graphic Designer and Web Designer",
+        "empresa": "IMA Health",
+        "data": "mar.2023 - oct.2023",
+        "descripcio": "Creation of various advertising materials and social media creatives using Adobe InDesign, XD, Canva, and Figma. Design and layout for La Torre Barcelona magazine, Ima Health covers, emails, and the ima.health website. Video editing with Adobe Premiere and After Effects. Production of creative videos for Fundación Pasqual Maragall and promotional content for Feebo. Document layout for investors and downloadable materials using InDesign, Illustrator, and Figma. Content translation into multiple languages, copywriting, and management of social media, including monitoring and responding to comments and reviews. Maintenance and updates of company branding.",
+        "slug": "cap-de-projecte-nextgen-technologies"
+      },
+      {
+        "posicio": "Graphic Designer",
+        "empresa": "IN2ART",
+        "data": "oct.2022 - mar.2023",
+        "descripcio": "Design and layout of Web and Mobile Application using Adobe XD, Photoshop, and Illustrator. Creation of company branding and brand book.",
+        "slug": "enginyer-de-programari-senior-innovatech"
+      },
+      {
+        "posicio": "Graphic Designer and Web Designer",
+        "empresa": "Productora 23",
+        "data": "feb.2022 - sep.2022",
+        "descripcio": "Creation and graphic design for magazines, and Instagram posts using InDesign and Canva. Web design for productora23.com and butaca7.es using WIX.",
+        "slug": "desenvolupador-de-programari-tech-solutions"
+      }
+    ],
+    "aficions": [
+      "Music",
+      "Cinema",
+      "Running",
+      "Anime",
+      "Math Games"
+    ]
+  }
+  

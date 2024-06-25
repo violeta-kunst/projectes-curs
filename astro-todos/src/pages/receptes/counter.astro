@@ -1,0 +1,14 @@
+---
+let counter = 0
+
+if (Astro.cookies.has("counter")) {
+  const cookie = Astro.cookies.get("counter")
+  counter = cookie.number() + 1
+}
+
+Astro.cookies.set("counter", counter.toString())
+---
+<html>
+  <h1>Counter = {counter}</h1>
+</html>
+

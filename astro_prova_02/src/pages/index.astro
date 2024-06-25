@@ -1,0 +1,31 @@
+
+---
+const url = "https://app.nocodb.com/api/v2/tables/mmy1omtm274mqpo/records";
+const options = {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json",
+        "xc-token": "NPu07sNv7LjzMBZCL4S-cytQfG3t9j6HDuxyOabj",
+    }
+};
+
+let resultat = await fetch(url, options);
+let dades = await resultat.json();
+const items = dades.list;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body>
+        <h1>Astro</h1>
+        {
+            items.map(re => <h4>{re.nom}</h4>)
+        }
+    </body>
+</html>

@@ -1,0 +1,50 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TodosController from "../../../classes/TodosController";
+import Recepta from "../../../components/ToDo.astro";
+// Exemple d'ús:
+
+const { Id } = Astro.params;
+let  item;
+
+const todosController = new TodosController();
+
+
+if (Astro.request.method === "POST") {
+    const data = await Astro.request.formData();
+    const id = data.get("id");
+
+    await todosController.deleteItem(id);
+
+    return Astro.redirect("/");
+} else {
+     item = await todosController.getItemById(Id);
+    //console.log(recepta);
+}
+---
+
+<Layout title="email done">
+    <h1> Have you sent the email? {item.Title}? </h1>
+
+    <form method="post">
+        <input value={Id} name="id" type="hidden" />
+
+            <button
+                class="bg-red-500 hover:bg-red-700 text-white py-1 px-2 text-sm rounded "
+            >
+                Yes
+            </button>
+
+        <a href={"/"}>
+            <button
+            type="button"
+                class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 text-sm rounded "
+            >
+                No
+            </button>
+        </a>
+
+
+     
+    </form>
+</Layout>

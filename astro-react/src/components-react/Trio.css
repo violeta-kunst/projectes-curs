@@ -1,0 +1,10 @@
+
+
+.contenidor {
+
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    padding: 10px;
+    border: 1px solid blue;
+}

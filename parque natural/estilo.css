@@ -1,0 +1,85 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 900px;
+}
+
+body {
+    font-family:"Lucida Sans Unicode";
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+    max-width: 900px;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: .2em;
+    text-align: center;
+    background-image:url('imágenes/panoramica.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 160px;
+    margin: 0px;
+    margin-bottom: 20px;
+    .color-primero{
+        color: #5F8F11;}
+    .color-resto{
+        color: #BF823B}
+}
+
+div.menu{
+    align-items: lef;
+    text-align: center;
+    padding: 30px;
+    float: left;
+}
+div.menu li{
+    padding: 2px
+}
+}
+div.menu li{
+    background-color: #70AF0A;
+}
+div.menu li :hover{
+    background-color: #BF823B;
+}
+
+div.main content {
+	width: 800px;
+	background-color: #FFF; 
+	margin-top: 10;
+	margin-right: auto;
+	margin-bottom: 10;
+	margin-left: auto;
+	border: 1px solid #D3D3D3;
+    flex: justify;
+    align-content: left;
+}
+
+h2 {
+    color: #70AF0A;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CFDFB5;
+    font-size: 21px;
+    margin-bottom: ;
+}
+
+h3, h4, h5 {
+    color: #BF823B;
+	margin-top: 25px;
+	margin-bottom: 0px;
+    font-size: 16.38px;
+}
+
+
+p {
+    margin-bottom: 15px;
+}

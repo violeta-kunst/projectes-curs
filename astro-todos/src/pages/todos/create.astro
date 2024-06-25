@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Back from "../../components/Back.astro";
+
+import TodosController from '../../classes/TodosController'
+
+
+
+
+
+if (Astro.request.method === "POST") {
+    const todosController = new TodosController();
+    const data = await Astro.request.formData();
+
+    const title = data.get("title");
+   
+    await todosController.createItem(title);
+
+    return Astro.redirect("/");
+}
+
+
+---
+
+<Layout title="New TO-DO">
+
+    <Back />
+
+    <form method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <button
+        class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 text-sm rounded ">Save</button>
+    </form>
+</Layout>

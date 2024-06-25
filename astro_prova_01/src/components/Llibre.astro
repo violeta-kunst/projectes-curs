@@ -1,0 +1,11 @@
+---
+
+let {autor, titol, imatge} = Astro.props;
+
+---
+
+<div class="llibre-card">
+    <img src={`/img/${imatge}`} alt={`Imatge del llibre ${titol}`} />
+    <h3>{titol}</h3>
+    <p>{autor}</p>
+  </div>

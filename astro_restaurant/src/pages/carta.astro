@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+
+
+const APIURL = "https://app.nocodb.com/api/v2/tables/m1fwgyajti42mh6/records?limit=25&shuffle=0&offset=0";
+const TOKEN = "OaUyxRywul6C2-8KSsR0gzKTBsWEquVigUOdtpZo";
+
+
+let list = [];
+
+async function fetchData() {
+  try {
+    const response = await fetch(APIURL, {
+      headers: {
+        "xc-token": TOKEN
+      }
+    });
+    if (response.ok) {
+      const data = await response.json();
+      list = data.list; 
+    } else {
+      console.error('Error en la respuesta de la API', response.status);
+    }
+  } catch (error) {
+    console.error('Error al obtener datos', error);
+  }
+}
+
+await fetchData();
+---
+
+<Layout></Layout>
+
+<Layout backgroundClass="background-carta">
+  <Menu></Menu>
+  <section class="menu-section">
+    <link rel="stylesheet" href="/styles/global.css">
+    <div class="menu-container">
+      <div class="menu-column">
+        <h2>Entrants</h2>
+        {list.length > 0 ? (
+          list.filter(plat => plat.Categoria === 'Entrants').map(plat => (
+            <div class="menu-item">
+              <h3>{plat.Nom}</h3>
+              <p><em>{plat.Ingredients}</em></p>
+              <p><strong>Preu:</strong> {plat.Preu}€</p>
+            </div>
+          ))
+    ) : (
+          <p>No hi ha dades disponibles.</p>
+        )}
+      </div>
+      <div class="menu-column">
+        <h2>Principals</h2>
+        {list.length > 0 ? (
+          list.filter(plat => plat.Categoria === 'Principals').map(plat => (
+            <div class="menu-item">
+              <h3>{plat.Nom}</h3>
+              <p><em>{plat.Ingredients}</em></p>
+              <p><strong>Preu:</strong> {plat.Preu}€</p>
+            </div>
+          ))
+        ) : (
+          <p>No hi ha dades disponibles.</p>
+        )}
+      </div>
+      <div class="menu-column">
+        <h2>Postres</h2>
+        {list.length > 0 ? (
+          list.filter(plat => plat.Categoria === 'Postres').map(plat => (
+            <div class="menu-item">
+              <h3>{plat.Nom}</h3>
+              <p><em>{plat.Ingredients}</em></p>
+              <p><strong>Preu:</strong> {plat.Preu}€</p>
+            </div>
+          ))
+        ) : (
+          <p>No hi ha dades disponibles.</p>
+        )}
+      </div>
+      <div class="menu-column">
+        <h2>Begudes</h2>
+        {list.length > 0 ? (
+          list.filter(plat => plat.Categoria === 'Begudes').map(plat => (
+            <div class="menu-item">
+              <h3>{plat.Nom}</h3>
+              <p><em>{plat.Ingredients}</em></p>
+              <p><strong>Preu:</strong> {plat.Preu}€</p>
+            </div>
+          ))
+        ) : (
+          <p>No hi ha dades disponibles.</p>
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
+

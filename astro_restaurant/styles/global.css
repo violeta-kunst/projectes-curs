@@ -1,0 +1,146 @@
+
+.background-index {
+  background: url('/imatges/index.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.background-quisom {
+  background: url('/imatges/quisom.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.background-carta {
+  background: url('/imatges/carta.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.background-reserves {
+  background: url('/imatges/reserves.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Open Sans';
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  margin: 85px;
+  text-align-last: left;
+}
+
+h3, h4 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-left: 800px;
+  padding-left: 0%;
+}
+
+p {
+  font-style: italic;
+  max-width: fit-content;
+  text-align: justify;
+  margin-top: 300px;
+  max-width: 30%;
+}
+
+.lead {
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(0, 21, 61, 0.607);
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.form-bootstrap {
+  padding-left: 400px;
+  padding-bottom: 100px;
+  padding-right: 30px;
+  border-radius: 10px;
+  margin: 100px;
+}
+
+.form-bootstrap label {
+  font-family: 'Open Sans';
+}
+
+.form-bootstrap input[type="text"],
+.form-bootstrap input[type="email"],
+.form-bootstrap input[type="date"],
+.form-bootstrap input[type="time"],
+.form-bootstrap textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  color: #02346a;
+}
+
+.form-bootstrap button[type="submit"] {
+  background-color: #2f2e79;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  margin-top: 10px;
+}
+
+.form-bootstrap button[type="submit"]:hover {
+  background-color: #040431;
+  color: #FFBD59
+}
+
+
+.menu-section .menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.menu-section .menu-column {
+  flex: 1 1 45%; 
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.menu-section .menu-item {
+  margin-bottom: 20px;
+}
+
+.menu-section h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.menu-section h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.menu-section p {
+  margin: 5px 0;
+}
+

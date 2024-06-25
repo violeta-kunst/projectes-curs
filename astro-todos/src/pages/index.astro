@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TodosController from "../classes/TodosController"
+import ToDo from "../components/ToDo.astro";
+// Exemple d'ús:
+
+const todosController = new TodosController();
+
+const items = await todosController.getAll();
+
+console.log(items);
+
+---
+
+<Layout title="Violeta" >
+
+  <a href="/todos/create" >
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      New To-Do
+    </button>
+</a>
+
+
+
+  <hr />
+  {items?.list.map((e) => <ToDo dades={e} />)}
+</Layout>

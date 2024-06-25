@@ -1,0 +1,1 @@
+motos.forEach(moto => console.log(moto.eur));

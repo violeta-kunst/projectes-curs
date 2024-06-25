@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+let gameData; // inicialitzem la variable gameData
+
+// si NO existeix la cookie "pepati", la creem i recarreguem la pàgina
+if (!Astro.cookies.has("pepati")) {
+  Astro.cookies.set("pepati", JSON.stringify([]), { path: '/' });
+  return Astro.redirect('/')
+} else {
+	//si existeix la cookie "pepati", la parsem a JSON i la guardam en la variable gameData
+	let cookie = Astro.cookies.get("pepati");
+	gameData = JSON.parse(cookie.value); // ull! el valor està a .value
+}
+
+// calculem el percentatge de jugades guanyadores
+let percentatgeGuanyador = 0;
+if (gameData.length){
+	percentatgeGuanyador = (gameData.filter(item => item.resultat === "Guanyador").length / gameData.length) * 100;	
+}
+
+// la pàgina mostra links a les jugades, un botó per netejar l'historial de jugades, i la llista de jugades fetes
+
+---
+
+<Layout>
+	<h1>Tria la teva jugada</h1>
+
+	<ul>
+		<li><a href="/jugada/PEDRA">PEDRA</a></li>
+		<li><a href="/jugada/PAPER">PAPER</a></li>
+		<li><a href="/jugada/TISORA">TISORA</a></li>
+	</ul>
+
+	<hr>
+	<h1>Jugades anteriors</h1>
+	
+	<a href="/neteja">Neteja historial</a>
+	<br>
+	<br>
+	<table>
+		<thead>
+			<tr>
+				<th>Data</th>
+				<th>Jugada</th>
+				<th>Ordinador</th>
+				<th>Resultat</th>
+		</thead>
+		<tbody>
+			{gameData.map( jugada => (
+				<tr>
+					<td>{jugada.data}</td>
+					<td>{jugada.jugada}</td>
+					<td>{jugada.ordinador}</td>
+					<td>{jugada.resultat}</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+	{
+		percentatgeGuanyador && (
+			<p>Partides guanyadess: {percentatgeGuanyador.toFixed(2)}%</p>
+		)
+	}
+</Layout>

@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Titol from "../components-astro/Titol.astro"
+import Destacat from "../components-astro/Destacat.astro"
+import Titol2 from "../components-react/Titol2"
+import Comptador from "../components-react/Comptador"
+
+import Trio from "../components-react/Trio"
+
+---
+<Layout>
+
+    <h1>Proves...</h1>
+
+    <Trio client:load />
+    <Titol frase="hola què tal?" />
+
+    <Destacat>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet nobis aspernatur expedita corporis eaque consectetur cupiditate odio quis, amet ab distinctio? Nemo voluptatem id vitae repellat expedita vel temporibus suscipit?
+    </Destacat>
+
+    <Titol2 frase="titol fet amb react" />
+
+    <Comptador client:load />
+
+</Layout>
